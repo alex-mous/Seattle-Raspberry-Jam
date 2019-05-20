@@ -10,39 +10,39 @@
 #Created by Alex Mous, 2019
 #Licensed under the CC BY-SA 4.0
 
-declare -A convert=( [0]=200 [1]=190 [2]=180 [3]=170 [4]=160 [5]=150 [6]=140 [7]=130 [8]=120 [9]=110 [10]=100 )
-PREV_TEMP=-1
+declare -A convert=( [0]=200 [1]=190 [2]=180 [3]=170 [4]=160 [5]=150 [6]=140 [7]=130 [8]=120 [9]=110 [10]=100 ) #Create an array to map the temperature values to servo PWM values
+PREV_TEMP=-1 #Variable to store the previous temperature
 
-setup_pin () {
-	gpio -g mode 18 pwm
-	gpio -g pwm 18 150
-	gpio pwm-ms
-	gpio pwmc 192
-	gpio pwmr 2000
+setup_pin () { #Setup function
+	gpio -g mode 18 pwm #Setup pin 18 for PWM
+	gpio -g pwm 18 150 #Set pulse width to 1.5ms
+	gpio pwm-ms #Set mark/space mode, so frequency (50Hz)=19200000/clock_divider/range
+	gpio pwmc 192 #Set clock divider to 192
+	gpio pwmr 2000 #Set the range to 2000
 }
 
-get_temp () {
-	RAW=`cat /sys/class/thermal/thermal_zone0/temp`
-	RAW=$[(($RAW/1000)+5)/10]
-	return $RAW
+get_temp () { #Retrieve the temperature and store it in the return variable
+	RAW=`cat /sys/class/thermal/thermal_zone0/temp` #Open and read temperature file
+	RAW=$[(($RAW/1000)+5)/10] #Convert the temperature to a range between 1 and 10 (rounding to the nearest ten)
+	return $RAW #Return the temperature
 }
 
-main () {
-	setup_pin
-	while :
+main () { #Main function
+	setup_pin #Run the setup function
+	while : #Forever loop
 	do
-		get_temp
-		TEMP=$?
-		ANGLE=${convert[$TEMP]}
-		if [ $TEMP -ne $PREV_TEMP ]; then
-			gpio -g pwm 18 200
-			sleep 1
-			gpio -g pwm 18 $ANGLE
+		get_temp #Get the temperature
+		TEMP=$? #Read the return variable
+		ANGLE=${convert[$TEMP]} #Input the temperature into the array to find the servo PMW value
+		if [ $TEMP -ne $PREV_TEMP ]; then #Check that the new temp is different from the previous temp
+			gpio -g pwm 18 200 #Start at 0
+			sleep 1 //Wait for the servo to move
+			gpio -g pwm 18 $ANGLE #Set the servo to the new PWM value
 		fi
-		sleep 5
-		PREV_TEMP=$TEMP
+		sleep 5 #Limit on loop frequency
+		PREV_TEMP=$TEMP #Set the previous temperature to equal the new temperature
 	done
 }
 
-main
+main #Run the main logic
 
