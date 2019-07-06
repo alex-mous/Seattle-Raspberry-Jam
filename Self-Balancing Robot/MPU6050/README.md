@@ -57,3 +57,12 @@ Function Definitions
 			float *results - pointer to the variable where the angle will be stored
 		function:
 			gets the current combined (accelerometer and gyroscope) angle
+			NOTE: the yaw axis will return 0 unless 'calc_yaw' is set to true - See Parameters
+
+Parameters:
+	calc_yaw
+		type:
+			bool
+		function:
+			set this to true when you want to calculate the angle around the yaw axis (remember to change this back to false after taking the yaw readings to prevent gyroscope drift)
+			this is used to prevent drift because only the gyroscope is used to calculate the yaw rotation
