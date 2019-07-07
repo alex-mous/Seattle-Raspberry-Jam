@@ -1,11 +1,7 @@
 <h1>MPU6050 Accelerometer and Gyroscope C++ library</h1><br>
-<h5>Copyright (c) 2019, Alex Mous<br>
-Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0)</h5><br><br><br>
-
 <h2>Description</h2><br>
 &nbsp&nbsp&nbsp&nbspa basic control library for the MPU6050<br>
 &nbsp&nbsp&nbsp&nbspprovides functions to read raw accelerometer data and fully corrected angles on any axis<br><br>
-
 <h2>Function Definitions</h2><br>
 &nbsp&nbsp&nbsp&nbsp<h3>__constructor__ (MPU6050)<br></h3>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>args:</b><br>
@@ -65,3 +61,5 @@ Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>function:<br></b>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspset this to true when you want to calculate the angle around the yaw axis (remember to change this back to false after taking the yaw readings to prevent gyroscope drift)<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspthis is used to prevent drift because only the gyroscope is used to calculate the yaw rotation<br>
+<h5>Copyright (c) 2019, Alex Mous<br>
+Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0)</h5><br><br><br>
