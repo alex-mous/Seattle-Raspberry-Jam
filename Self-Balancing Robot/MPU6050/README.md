@@ -1,6 +1,6 @@
-<h2>-------------------------------MPU6050 Accelerometer and Gyroscope C++ library-----------------------------<br>
----------------------------------------Copyright (c) 2019, Alex Mous---------------------------------------<br>
------------Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0)--------<br></h2><br><br><br>
+<h1>MPU6050 Accelerometer and Gyroscope C++ library</h1><br>
+<h5>Copyright (c) 2019, Alex Mous<br>
+Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0)</h5><br><br><br>
 
 <h3>Description</h3><br>
 &nbsp&nbsp&nbsp&nbspa basic control library for the MPU6050<br>
