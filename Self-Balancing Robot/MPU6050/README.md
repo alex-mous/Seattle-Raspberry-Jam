@@ -57,8 +57,7 @@ Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfloat *results - pointer to the variable where the angle will be stored<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfunction:<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspgets the current combined (accelerometer and gyroscope) angle<br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNOTE: the yaw axis will return 0 unless 'calc_yaw' is set to true - See Parameters<br>
-
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNOTE: the yaw axis will return 0 unless 'calc_yaw' is set to true - See Parameters<br><br>
 Parameters:<br>
 &nbsp&nbsp&nbsp&nbspcalc_yaw<br>
 &nbsp&nbsp&nbsp&nbspnbsp&nbsp&nbsp&nbsptype:<br>
