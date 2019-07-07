@@ -1,12 +1,12 @@
--------------------------------MPU6050 Accelerometer and Gyroscope C++ library-----------------------------
-Copyright (c) 2019, Alex Mous
-Licensed under the CC BY-NC SA 4.0
+<h2>-------------------------------MPU6050 Accelerometer and Gyroscope C++ library-----------------------------<br>
+---------------------------------------Copyright (c) 2019, Alex Mous---------------------------------------<br>
+-----------Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0)--------<br></h2><br><br><br>
 
-Description
-	a basic control library for the MPU6050
-	provides functions to read raw accelerometer data and fully corrected angles on any axis
+<h3>Description</h3><br>
+&nbsp&nbsp&nbsp&nbspa basic control library for the MPU6050<br>
+&nbsp&nbsp&nbsp&nbspprovides functions to read raw accelerometer data and fully corrected angles on any axis<br><br>
 
-Function Definitions
+<h3>Function Definitions</h3><br>
 	-constructor- (MPU6050)
 		args:
 			int8_t addr - the address of the MPU6050 (usually 0x68; can find with command "i2cdetect -y 1" (may need to be installed - run "sudo apt-get install i2c-tools -y")
