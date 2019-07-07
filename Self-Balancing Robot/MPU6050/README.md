@@ -66,3 +66,4 @@ Parameters:<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfunction:<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspset this to true when you want to calculate the angle around the yaw axis (remember to change this back to false after taking the yaw readings to prevent gyroscope drift)<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspthis is used to prevent drift because only the gyroscope is used to calculate the yaw rotation<br>
+
