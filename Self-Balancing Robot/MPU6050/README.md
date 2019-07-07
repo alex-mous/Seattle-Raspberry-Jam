@@ -2,7 +2,7 @@
 <h2>Description</h2><br>
 &nbsp&nbsp&nbsp&nbspThis is a basic control library for the MPU6050<br>
 &nbsp&nbsp&nbsp&nbspIt provides functions to read raw accelerometer data and fully corrected (with complementary filters and some logic) angles on any axis (roll, pitch, yaw)<br><br>
-<h2>Function Definitions</h2><br>
+<h2>Function Definitions</h2>
 &nbsp&nbsp&nbsp&nbsp<h3>__constructor__ (MPU6050)<br></h3>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>args:</b><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspint8_t addr - the address of the MPU6050 (usually 0x68; can find with command "i2cdetect -y 1" (may need to be installed - run "sudo apt-get install i2c-tools -y")<br>
