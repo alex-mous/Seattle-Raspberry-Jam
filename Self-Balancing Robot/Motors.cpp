@@ -1,7 +1,9 @@
 //Copyright (c) 2019, Alex Mous
 //Licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0)
 
-#include "GPIO.h"
+#include "GPIO.h" //Custom library
+#include "MPU6050.h" //Custom library
+
 #include <iostream>
 #include <string.h>
 
@@ -40,7 +42,15 @@ int cleanup() {
 
 int main() {
 	setupMotors();
-
+	motors[0].writeValue(0); //Set all pins to low
+	motors[1].writeValue(1); //Set all pins to low
+	motors[2].writeValue(0); //Set all pins to low
+	motors[3].writeValue(1); //Set all pins to low
+	sleep(3);
+	motors[0].writeValue(0); //Set all pins to low
+	motors[1].writeValue(0); //Set all pins to low
+	motors[2].writeValue(0); //Set all pins to low
+	motors[3].writeValue(0); //Set all pins to low
 
 
 
