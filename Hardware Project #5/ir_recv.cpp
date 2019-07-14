@@ -27,7 +27,7 @@ char buff[sizeof(event)]; //Buffer for raw data
 
 int status; //Status variable
 
-int read_data(int8_t *output, int timeout_len) { //Read raw data from fd with timeout of timeout seconds and return current key (success code will be 00 for error, 11 for timeout, 22 for unaccepted event (not a pressed ev_key event) and 99 for successful)
+int read_data(uint16_t *output, int timeout_len) { //Read raw data from fd with timeout of timeout seconds and return current key (success code will be 00 for error, 11 for timeout, 22 for unaccepted event (not a pressed ev_key event) and 99 for successful)
 	FD_ZERO(&r_set); //Clear fd set
 	FD_SET(fd, &r_set); //Add our fd to the set
 
@@ -60,7 +60,7 @@ int read_data(int8_t *output, int timeout_len) { //Read raw data from fd with ti
 }
 
 int main() {
-	int8_t key; //Variable to hold final key
+	uint16_t key; //Variable to hold final key
 	int8_t success; //Variable to hold return code of function
 
 	printf("Setup complete - entering main loop\n");
