@@ -1,4 +1,6 @@
 //Copyright (c) 2019, Alex Mous & Seattle Raspberry Jam
+//Licensed under the CC BY-SA 4.0
+
 //Reads the device /dev/input/eventN, checks for EV_KEY events and reports the key on the key-down event
 //Note: the keymap for the remote needs to be initialized before running this code (otherwise no events will show up)
 //For more information, see https://github.com/alexmous/Seattle-Raspberry-Jam/tree/master/Hardware%20Project%20%235
