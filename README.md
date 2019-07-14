@@ -16,5 +16,7 @@ Home of the project tutorials and files for the Seattle Raspberry Jam.
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMake some light with your Raspberry Pi! This tutorial guides you through how to attach and control a strip of WS2812 RGB addressable LEDs to a Raspberry Pi.<br>
 &nbsp&nbsp&nbsp&nbsp<h5>Hardware Project #4 - Servo Dial</h5><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInterface a servo directly with a Raspberry Pi to create a multi-purpose dial. Then learn how servos work and also write a script to monitor the CPU temperature and adjust the servo accordingly.<br>
+&nbsp&nbsp&nbsp&nbsp<h5>Hardware Project #5 - IR Remote</h5><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLearn how to connect an IR receiver and remote to a Raspberry Pi to create a power switch.<br>
 &nbsp&nbsp&nbsp&nbsp<h5>Self-Balancing Robot</h5><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWork in progress... Check back for more details soon<br>
