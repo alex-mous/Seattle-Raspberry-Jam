@@ -1,5 +1,5 @@
 # table custom_remote, type: NEC
-0x19 KEY_0
+0x19 KEY_POWER
 0x45 KEY_1
 0x46 KEY_2
 0x47 KEY_3
