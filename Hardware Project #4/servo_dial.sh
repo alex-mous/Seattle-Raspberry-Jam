@@ -36,7 +36,7 @@ main () { #Main function
 		ANGLE=${convert[$TEMP]} #Input the temperature into the array to find the servo PMW value
 		if [ $TEMP -ne $PREV_TEMP ]; then #Check that the new temp is different from the previous temp
 			gpio -g pwm 18 200 #Start at 0
-			sleep 1 //Wait for the servo to move
+			sleep 1 #Wait for the servo to move
 			gpio -g pwm 18 $ANGLE #Set the servo to the new PWM value
 		fi
 		sleep 5 #Limit on loop frequency
