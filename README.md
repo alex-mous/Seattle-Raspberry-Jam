@@ -18,5 +18,7 @@ Home of the project tutorials and files for the Seattle Raspberry Jam.
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInterface a servo directly with a Raspberry Pi to create a multi-purpose dial. Then learn how servos work and also write a script to monitor the CPU temperature and adjust the servo accordingly.<br>
 &nbsp&nbsp&nbsp&nbsp<h5>Hardware Project #5 - IR Remote</h5><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLearn how to connect an IR receiver and remote to a Raspberry Pi to create a power switch.<br>
+&nbsp&nbsp&nbsp&nbsp<h5>Hardware Project #6 - 16x1 LCD Character Display</h5><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHook up a 16x1 LCD display to a Raspberry Pi and control it using a kernel module.<br>
 &nbsp&nbsp&nbsp&nbsp<h5>Self-Balancing Robot</h5><br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWork in progress... Check back for more details soon<br>
