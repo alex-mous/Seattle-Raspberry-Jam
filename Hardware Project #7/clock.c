@@ -81,7 +81,7 @@ void send() {
     FILE * file;
     int i;
     file = fopen("/dev/pi2max7219", "w");
-    for (i = 0; i < 8; i++) fprintf(file, "%lld ", (buf[i] >> 56));
+    for (i = 0; i < 8; i++) fprintf(file, "%llx ", (buf[i] >> 56));
     fprintf(file, "\n");
     fclose(file);
     return;

@@ -18,6 +18,12 @@
  * To compile install gpiod headers (apt-get install libgpiod-dev)
  * then run: gcc -l gpiod -o pi2max7219 pi2max7219.c
  *
+ * To load driver run: sudo nice -n -20 pi2max7219
+ *
+ * Write data to /dev/pi2max7219, ascii text hex formatted, 0-ff, space delimited for each column, with a space and newline at the end.
+ *
+ * For example: echo 10 22 > /dev/pi2max7219 lights fifth LED in the first column, second and sixth LEDs in the second column.
+ *
  */
 
 #define _GNU_SOURCE
@@ -90,7 +96,7 @@ static int send(void *arg) {
 
 	while (byte != NULL) {
 
-	    sscanf(byte, "%u", &value);
+	    sscanf(byte, "%x", &value);
     	    byte = strtok(NULL, " ");
     	    bytes++;
 
@@ -139,6 +145,19 @@ int main(void) {
 
     int i;
 
+    //set up fake device file
+    umask(0);
+    unlink("/dev/pi2max7219");
+
+    if (mkfifo("/dev/pi2max7219", S_IRUSR | S_IWUSR | S_IWGRP | S_IWOTH) == -1) {
+
+	printf("Device file creation error. Program must be run as root (or use sudo).\n");
+	return(-1);
+
+    }
+
+    file = fopen("/dev/pi2max7219", "r+");
+
     //set up gpios
     chip = gpiod_chip_open_by_name("gpiochip0");
     clk = gpiod_chip_get_line(chip, 14);
@@ -150,14 +169,10 @@ int main(void) {
 
     //blank display and initialize  max7219
     for(i = 0x100; i < 0x900; i += 0x100) command(i);
-    command(0xa01); //intensity
+    command(0xa01); //intensity, valid values are from 0xa01 to 0xa0f
     command(0xb07);
     command(0xc01);
     command(0xf00);
-
-    //set up fake device
-    mkfifo("/dev/pi2max7219", 666);
-    file = fopen("/dev/pi2max7219", "r+");
 
     //launch background process
     stack = malloc(1024 * 1024);
